@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { v2 as cloudinary } from 'cloudinary'
 import { requireAuth } from '@/lib/middleware'
 
@@ -8,9 +8,9 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 })
 
-export async function POST(request: Request) {
-  const authResponse = await requireAuth(request)
-  if (authResponse) return authResponse
+export async function POST(request: NextRequest) {
+  const authResponse = requireAuth(request)
+  if (authResponse instanceof Response) return authResponse
 
   try {
     const formData = await request.formData()
