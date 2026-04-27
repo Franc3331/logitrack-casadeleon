@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo oscuro exacto al logo original -->
+  <rect width="512" height="512" fill="#1b1e25" rx="100" />
+  
+  <!-- Letra 'a' blanca minimalista -->
+  <text x="256" y="420" font-family="Montserrat, Arial, sans-serif" font-weight="900" font-size="340" fill="#ffffff" text-anchor="middle" letter-spacing="-10">a</text>
+
+  <!-- Casco de construcción amarillo -->
+  <g transform="translate(150, 130) rotate(-10) scale(1.1)" fill="#ffd100">
+    <!-- Domo del casco -->
+    <path d="M 30 120 C 30 10, 180 10, 180 120 Z" />
+    <!-- Ala del casco -->
+    <rect x="10" y="110" width="190" height="20" rx="10" />
+    <!-- Detalle superior (cresta del casco) -->
+    <path d="M 85 110 C 85 40, 125 40, 125 110 Z" fill="#e6bc00"/>
+  </g>
+</svg>
